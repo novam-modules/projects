@@ -1,0 +1,10 @@
+{
+    "name": "novam-modules/projects",
+    "authors": [
+        {
+            "name": "Hilkiah Makemo",
+            "email": "hilmak01@gmail.com"
+        }
+    ],
+    "require": {}
+}
