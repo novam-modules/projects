@@ -9,7 +9,7 @@
     "require": {},
     "scripts": {
         "post-install-cmd": [
-             "@php -r \"file_exists('../../../modules/projects') || chdir('../../../) && php artisan module:make projects;\""
+             "@php -r \"chdir('../../../') && php artisan module:make projects;\""
         ]
     },
 }
