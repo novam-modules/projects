@@ -8,7 +8,7 @@
     ],
     "require": {},
     "scripts": {
-        "post-install-cmd": [
+        "post-update-cmd": [
              "@php -r \"chdir('../../../');\"",
              "@php \"artisan module:make projects;\""
         ]
