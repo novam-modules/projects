@@ -6,11 +6,13 @@
             "email": "hilmak01@gmail.com"
         }
     ],
-    "require": {},
+    "require-dev": {
+        "nwidart/laravel-modules": "^3.3"
+    },
     "scripts": {
         "post-install-cmd": [
              "@php -r \"chdir('../../../');\"",
-             "@php \"artisan module:make projects;\""
+             "@php \"php artisan module:make projects;\""
         ],
         "post-update-cmd": [
             "@post-install-cmd"
