@@ -9,7 +9,8 @@
     "require": {},
     "scripts": {
         "post-install-cmd": [
-             "@php -r \"chdir('../../../') && php artisan module:make projects;\""
+             "@php -r \"chdir('../../../');\"",
+             "@php \"artisan module:make projects;\""
         ]
-    },
+    }
 }
