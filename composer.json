@@ -1,5 +1,6 @@
 {
     "name": "novam-modules/projects",
+    "type": "library",
     "authors": [
         {
             "name": "Hilkiah Makemo",
