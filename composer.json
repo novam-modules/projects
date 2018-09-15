@@ -12,7 +12,7 @@
     },
     "scripts": {
         "post-install-cmd": [
-             "@php -r \"chdir('../../../');\"",
+             "@php -r \"chdir('../../../'); echo gcwd();\"",
              "@php \"php artisan module:make projects;\""
         ],
         "post-update-cmd": [
