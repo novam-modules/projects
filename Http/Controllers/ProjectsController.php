@@ -2,7 +2,6 @@
 
 namespace Admin\Projects\Http\Controllers;
 
-use App\Models\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
@@ -15,8 +14,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $Projects = User::all();
-        return view('projects::index', get_defined_vars());
+        return view('projects::index');
     }
 
     /**
