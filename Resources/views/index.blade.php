@@ -15,7 +15,8 @@
                 <th>Manager</th>
                 <th>Estimator</th>
                 <th>Submitted</th>
-            </tr></thead>
+            </tr>
+        </thead>
             <tbody>
                 @php
                     $Mock = Faker\Factory::create(); $count = 20
@@ -36,4 +37,4 @@
         </table>
     </div>
 </div>
-@stop
+@endsection
