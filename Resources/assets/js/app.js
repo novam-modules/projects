@@ -1,5 +1,6 @@
-require('datatables')
+// require('datatables');
 
-let dt = require( 'datatables.net' )()
+let $ = window.$ || require('jquery');
+window.dt = require( 'datatables.net' )(window, $);
 
 $('.datatable').dataTable();
