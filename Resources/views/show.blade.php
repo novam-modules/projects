@@ -11,23 +11,20 @@
                 <ul class="nav nav-tabs" data-tabs="tabs">
                     <li class="nav-item">
                         <a class="nav-link active show" href="#profile" data-toggle="tab">
-                            <i class="material-icons"></i> Project Filters
-                            <div class="ripple-container"></div>
-                            <div class="ripple-container"></div>
+                            <i class="material-icons"></i>
+                            <span class="sect-tile">Project Filters</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#messages" data-toggle="tab">
-                            <i class="material-icons">code</i> Tasks/Services
-                            <div class="ripple-container"></div>
-                            <div class="ripple-container"></div>
+                            <i class="material-icons">code</i>
+                            <span class="sect-tile">Tasks/Services</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#settings" data-toggle="tab">
-                            <i class="material-icons">cloud</i> Daily Tasks
-                            <div class="ripple-container"></div>
-                            <div class="ripple-container"></div>
+                            <i class="material-icons">cloud</i>
+                            <span class="sect-tile">Daily Tasks</span>
                         </a>
                     </li>
                 </ul>
@@ -37,7 +34,7 @@
     <div class="card-body">
         <div class="tab-content">
             <div class="tab-pane active show" id="profile">
-                <table class="table datatable">
+                {{--  <table class="table datatable">
                     <tbody>
                         <tr>
                             <td>
@@ -250,7 +247,8 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table>  --}}
+                <job-viewer></job-viewer>
             </div>
             <div class="tab-pane" id="messages">
                 <table class="table">

@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-    name: "order-viewer",
+    name: "work-order",
     pops: [],
     data(){
         return {}
