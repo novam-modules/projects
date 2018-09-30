@@ -23,8 +23,6 @@ class CreateJobsTable extends Migration
             $table->string('title');
             $table->string('subtitle')->nullable();
             $table->text('details')->nullable();
-            $table->text('services')->nullable();
-            $table->text('materials')->nullable();
             $table->text('documents')->nullable();
             $table->text('labor')->nullable();
             $table->text('equipments')->nullable();

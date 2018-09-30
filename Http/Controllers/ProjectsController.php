@@ -33,6 +33,7 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
+
     }
 
     /**
