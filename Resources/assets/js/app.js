@@ -1,5 +1,6 @@
 
 Vue.component('JobDocs', require('../../components/JobDocs.vue'));
+Vue.component('JobSetup', require('../../components/JobSetup.vue'));
 Vue.component('JobViewer', require('../../components/JobViewer.vue'));
 Vue.component('OfficeUse', require('../../components/OfficeUse.vue'));
 Vue.component('TaskViewer', require('../../components/TaskViewer.vue'));

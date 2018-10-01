@@ -4,6 +4,7 @@
             <div class="card">
                 <div class="card-header bg-primary">
                     Job
+                    <a href="#edit-job" class="float-right material-icons text-white">settings</a>
                 </div>
                 <div class="card-body">
                     <h4 class="h5">WCSD - Enterprise High School 2017</h4>
@@ -19,14 +20,14 @@
             <div class="card">
                 <div class="card-header bg-primary">
                     Customer
-
                 </div>
                 <div class="card-body p-0 text-compact">
                     <div class="col">
                         <h4 class="h5 mt-3">
-                            <select class="filled-form form-control" disabled>
+                            <select class="filled-form" disabled hidden>
                                 <option value="">Paul Properties Inc</option>
                             </select>
+                            <span>Paul Properties Inc</span>
                         </h4>
                         <h6 class="">
                             <small>Dave Paul (Owner--Community Manager)</small>
@@ -68,7 +69,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-deck mb-3">
+        <div class="card-group mb-3">
             <div class="card col-md-4">
                 <div class="card-header row bg-primary">
                     Documents
