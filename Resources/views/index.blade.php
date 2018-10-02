@@ -22,29 +22,29 @@
     </thead>
         <tbody>
             @php
-                $Mock = Faker\Factory::create(); $count = 75;
+                //$Jobs = Admin\Projects\Models\Job::all()->take(100);
                 $success = ['active','pending','complete'];
                 $class = ['success', 'warning', 'primary'];
             @endphp
-            @for ($i = 1; $i <= $count; $i++)
+            @foreach($Jobs as $job)
             <tr>
                 <td>
-                    <input type="checkbox" name="id" name="{{$i}}"/>
+                    <input type="checkbox" name="id"/>
                 </td>
                 <td>
-                    <a href="/admin/projects/{{$i}}">{{$Mock->Company}}</a>
+                    <a href="/admin/projects/{{ $job->id }}">{{ $job->name }}</a>
                 </td>
-                <td>{{$Mock->Company}}</td>
-                <td>{{$Mock->Name}}</td>
-                <td>{{$Mock->Name}}</td>
-                <td>{{$Mock->date('M d, Y')}}</td>
+                <td>{{$job->customer->name ?? ""}}</td>
+                <td>{{$job->manager->name ?? ""}}</td>
+                <td>{{$job->estimator->name ?? ""}}</td>
+                <td>{{$job->created_at }}</td>
                 <td>
                     <span class="badge p-1 btn-block badge-{{$class[$n = mt_rand(0,2)]}}">
                         {{$success[$n]}}
                     </span>
                 </td>
             </tr>
-            @endfor
+            @endforeach
         </tbody>
     </table>
 </div>

@@ -105,7 +105,7 @@
 <script>
 export default {
     name: "job-viewer",
-    pops: [],
+    pops: ["job-id", "default-job"],
     data(){
         return {
             job: {},

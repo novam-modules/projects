@@ -205,16 +205,7 @@
                 <button type="button" class="btn btn-secondary btn-block">Save</button>
             </div>
         </div>
-        <div class="row workorder-header">
-            <div class="col-sm-12 col"><span>Date</span>
-                <a href="#"
-                    class="add-task pull-right no-print">Date <i class="icon-add-circle"></i>
-                </a>
-            </div>
-            <div class="col-sm-12 col"><span>Crew</span></div>
-            <div class="col-sm-12 col"><span>Materials</span></div>
-            <div class="col-sm-12 col"><span>Equipment/Vehicles</span></div>
-        </div>
+
     </div>
 </template>
 

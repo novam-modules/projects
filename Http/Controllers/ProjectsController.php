@@ -4,6 +4,7 @@ namespace Admin\Projects\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Admin\Projects\Models\Job;
 use Illuminate\Routing\Controller;
 
 class ProjectsController extends Controller
@@ -14,7 +15,8 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        return view('projects::index');
+        $Jobs = Job::with('customer','manager','estimator')->get();
+        return view('projects::index', get_defined_vars());
     }
 
     /**
@@ -40,9 +42,10 @@ class ProjectsController extends Controller
      * Show the specified resource.
      * @return Response
      */
-    public function show()
+    public function show($id)
     {
-        return view('projects::show');
+        $Job = Job::find($id);
+        return view('projects::show', get_defined_vars());
     }
 
     /**
