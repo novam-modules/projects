@@ -1,8 +1,16 @@
 @extends('projects::layouts.master')
 
 @section('content')
-<h1>
-    Projects
+<h1 class="title h2 d-flex align-items-center">
+    <a href="/admin" class="material-icons">settings</a>
+    <span class="w-100 text-center">Projects</span>
+    <a href="#add-new-job"
+        class="material-icons"
+        data-toggle="modal"
+        data-keyboard="false"
+        data-backdrop="static">
+        add_circle_outline
+    </a>
 </h1>
 <hr>
 <div class="table-responsive">
@@ -48,4 +56,13 @@
         </tbody>
     </table>
 </div>
+<modal-viewer
+        :modal-id="'add-new-job'"
+        :modal-title="'Add New Job'"
+        :modal-size="'modal-lg'">
+
+        <new-job
+            :jobUrl="'{{ user_route('projects') }}'">
+        </new-job>
+    </modal-viewer>
 @endsection

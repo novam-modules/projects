@@ -4,13 +4,15 @@
             <div class="col-md-3">
                 <div class="d-flex">
                     <div class="input-group input-group-sm">
-                        <input type="text" class="form-control disabled">
+                        <date-picker format="mm-dd-YYYY"></date-picker>
                         <div class="input-group-append">
-                            <div class="input-group-text">+</div>
+                            <div class="input-group-text">
+                                [c]
+                            </div>
                         </div>
                     </div>
                     <button class="btn btn-sm btn-outline-primary mx-3">
-                        +
+                        <i class="fa fa-plus-circle"></i>
                     </button>
 
                 </div>
