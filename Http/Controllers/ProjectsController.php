@@ -25,7 +25,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('projects::create');
+        return view('projects::create', get_defined_vars());
     }
 
     /**
