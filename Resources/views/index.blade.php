@@ -64,4 +64,4 @@
         $('#projects', document).DataTable();
     });
 </script>
-@endscripts
+@endpush
