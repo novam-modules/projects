@@ -14,5 +14,4 @@ const projects = new Vue({
 
 let $ = window.$ || require('jquery');
 window.dt = require( 'datatables.net' )(window, $);
-
-$('.datatable').dataTable();
+require( 'datatables.net-bs' )(window, $);

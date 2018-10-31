@@ -1,17 +1,21 @@
 @extends('projects::layouts.master')
 
 @section('content')
-<h1 class="title h2 d-flex align-items-center">
-    <a href="/modules" class="material-icons">settings</a>
-    <span class="w-100 text-center">Projects</span>
-    <a href="{{ user_route('projects/create') }}"
-        class="material-icons">
-        add_circle_outline
-    </a>
-</h1>
-<hr>
-<div class="table-responsive">
-    <table class="table table-hover table-sm datatable border shadow mb-3">
+<header class="page-header">
+    <div class="container-fluid">
+       <h1 class="title h2 d-flex align-items-center">
+            <a href="/modules" class="material-icons">settings</a>
+            <span class="w-100 text-center">Projects</span>
+            <a href="{{ user_route('projects/create') }}"
+                class="material-icons">
+                add_circle_outline
+            </a>
+        </h1>
+    </div>
+</header>
+{{--  <hr>  --}}
+<div class="table-responsive px-3">
+    <table class="table table-hover table-sm border shadow mb-3" id="projects">
         <thead class="text-success">
             <tr>
                 <th>
@@ -37,7 +41,7 @@
                     <input type="checkbox" name="id"/>
                 </td>
                 <td>
-                    <a href="/modules/projects/{{ $job->id }}">{{ $job->name }}</a>
+                    <a href="{{ route('projects.show', $job->id) }}">{{ $job->name }}</a>
                 </td>
                 <td>{{$job->customer->name ?? ""}}</td>
                 <td>{{$job->manager->name ?? ""}}</td>
@@ -54,3 +58,10 @@
     </table>
 </div>
 @endsection
+@push('scripts')
+<script>
+    $(function(){
+        $('#projects', document).DataTable();
+    });
+</script>
+@endscripts

@@ -1,12 +1,17 @@
 @extends('projects::layouts.master')
 
 @section('content')
-    <h1 class="title h2 d-flex align-items-center">
-        <a href="" class="material-icons">settings</a>
-        <span class="w-100 text-center">{{ $Job->name ?? "Job Title Here" }}</span>
-        <a href="#add-new-job" data-toggle="modal" class="material-icons">add_circle_outline</a>
-    </h1>
-    <job-viewer
+<header class="page-header">
+    <div class="container-fluid">
+        <h1 class="title h2 d-flex align-items-center">
+            <a href="" class="material-icons">settings</a>
+            <span class="w-100 text-center">{{ $Job->name ?? "Job Title Here" }}</span>
+            <a href="#add-new-job" data-toggle="modal" class="material-icons">add_circle_outline</a>
+        </h1>
+    </div>
+</header>
+   <div class="px-3">
+        <job-viewer
         :job-id="'{{ $Job->id }}'"
         :default-job='@json($Job)'>
     </job-viewer>
@@ -22,6 +27,7 @@
             </div>
         </div>
     </div>
+   </div>
     <div class="clearfix my-3 py-3"><br/></div>
     <modal-viewer
         :modal-id="'add-new-job'"
